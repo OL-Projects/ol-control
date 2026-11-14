@@ -18,73 +18,10 @@
 <meta property="og:locale:alternate" content="fr_CA">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='26' fill='%23080A0E'/%3E%3Cg fill='%23ECEBE4'%3E%3Cpath fill-rule='evenodd' d='M41 29a31 31 0 1 0 0 62a31 31 0 1 0 0-62zM41 43a17 17 0 1 1 0 34a17 17 0 1 1 0-34z'/%3E%3Cpath d='M68 29h14v48h28v14H68z'/%3E%3C/g%3E%3C/svg%3E">
-<meta name="color-scheme" content="dark">
-<style>
-  :root{
-    --bg:#080A0E; --ink:#ECEBE4; --mute:#93A0B4; --dim:#6F7E92;
-    --rule:rgba(236,235,228,.14); --rule2:rgba(236,235,228,.07);
-    --accent:#5B9DFF; --ok:#7FE3A9; --warn:#E8B07C;
-    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;
-    --sans:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Helvetica,Arial,sans-serif;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{-webkit-text-size-adjust:100%}
-  body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
-  a{color:inherit}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 26px}
-  .ml{font:500 10.5px/1.5 var(--mono);letter-spacing:.15em;text-transform:uppercase;color:var(--dim)}
-  header{border-bottom:1px solid var(--rule)}
-  header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:18px}
-  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-  .brand svg{width:26px;height:26px;color:var(--ink)}
-  .brand b{font-size:15px;letter-spacing:.02em;font-weight:600}
-  .nav{display:flex;align-items:center;gap:18px}
-  .back{color:var(--mute);text-decoration:none;border-bottom:1px solid transparent}
-  .back:hover{color:var(--ink);border-bottom-color:var(--rule)}
-  .lang{display:flex;align-items:center;gap:8px}
-  .lang a{text-decoration:none;color:var(--mute);border-bottom:1px solid transparent}
-  .lang a[aria-current=true]{color:var(--ink);border-bottom-color:var(--accent)}
-  main{padding:72px 0 40px}
-  .eyebrow{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
-  .eyebrow::before{content:"";width:28px;height:1px;background:var(--rule)}
-  h1{font-size:clamp(40px,6vw,72px);line-height:1;letter-spacing:-.04em;font-weight:600;margin:22px 0 0;max-width:14ch}
-  .lede{margin-top:22px;max-width:52ch;color:var(--mute);font-size:18px}
-  .grid{display:grid;gap:56px;margin-top:56px;min-width:0}
-  .grid>section{min-width:0}
-  .codewrap{min-width:0;max-width:100%}
-  @media (min-width:900px){.grid{grid-template-columns:1.1fr .9fr;gap:72px}}
-  .dl{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:8px}
-  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 22px;border-radius:4px;text-decoration:none;
-       font-weight:600;font-size:15px;border:1px solid transparent;transition:transform .12s ease, background .2s ease}
-  .btn:active{transform:scale(.985)}
-  .btn-p{background:var(--accent);color:#04101F}
-  .btn-p:hover{background:#7DB2FF}
-  .btn-g{border-color:var(--rule);color:var(--ink)}
-  .btn-g:hover{border-color:rgba(236,235,228,.35)}
-  .meta{margin-top:18px;color:var(--dim)}
-  .codewrap{margin-top:22px;border:1px solid var(--rule);background:#0B1017}
-  .codewrap .cap{display:flex;justify-content:space-between;padding:10px 14px;border-bottom:1px solid var(--rule2)}
-  pre{margin:0;padding:14px;overflow-x:auto;font:400 12.5px/1.7 var(--mono);color:var(--mute)}
-  pre b{color:var(--ink);font-weight:500}
-  h2{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);font-weight:600;
-     padding-bottom:12px;border-bottom:1px solid var(--rule);margin-bottom:18px}
-  ol.steps{list-style:none;counter-reset:s}
-  ol.steps li{counter-increment:s;padding:0 0 18px 40px;position:relative;color:var(--mute)}
-  ol.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:1px;
-    font:500 11px/1.6 var(--mono);letter-spacing:.1em;color:var(--dim)}
-  ol.steps b{color:var(--ink);font-weight:500}
-  code{font:400 12.5px/1.6 var(--mono);background:#0B1017;border:1px solid var(--rule2);padding:2px 6px;color:var(--ink)}
-  .cols{display:grid;gap:40px;margin-top:64px}
-  @media (min-width:820px){.cols{grid-template-columns:1fr 1fr;gap:64px}}
-  ul.plain{list-style:none}
-  ul.plain li{padding:10px 0;border-bottom:1px solid var(--rule2);color:var(--mute);display:flex;gap:12px}
-  ul.plain li:last-child{border-bottom:0}
-  ul.plain li::before{content:"—";color:var(--dim);flex:none}
-  .note{margin-top:56px;border-left:2px solid var(--warn);padding:14px 18px;background:#0B1017;color:var(--mute);font-size:14.5px}
-  footer{border-top:1px solid var(--rule);margin-top:72px;padding:26px 0 64px}
-  footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;color:var(--dim)}
-  :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-</style>
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#080A0E">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f5ef">
+<link rel="stylesheet" href="../assets/inner.css">
 <!-- ol:page-jsonld:start -->
 <script type="application/ld+json">
 {
@@ -132,7 +69,8 @@
 </script>
 <!-- ol:page-jsonld:end -->
 </head>
-<body>
+<body class="p-download">
+<a class="skip" href="#main">Skip to content</a>
 
 <header>
   <div class="wrap">
@@ -148,7 +86,7 @@
   </div>
 </header>
 
-<main class="wrap">
+<main class="wrap" id="main">
   <p class="eyebrow ml">Download · 0.17.1 · gen f225595fa9b9 · macOS 12+ · Apple silicon</p>
   <h1>Install OL.</h1>
   <p class="lede">One download, one model key of your own, nothing to configure before the first unit of work.</p>

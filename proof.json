@@ -1,7 +1,7 @@
 {
  "schema": "ol.control.proof/1",
- "build": "fac6fae61240",
- "generated": "2026-11-14T12:47:26Z",
+ "build": "cd47295de8da",
+ "generated": "2026-11-14T13:22:37Z",
  "algorithm": "sha256",
  "note": "Recomputed in the visitor's browser and in CI. A mismatch is a refusal, not a warning.",
  "files": [
@@ -21,6 +21,11 @@
    "bytes": 1314
   },
   {
+   "path": "assets/inner.css",
+   "sha256": "eeb6527e6e1b5527f33452a58a5e23ce1b860637008a2ecdebfc25e90aa37355",
+   "bytes": 7883
+  },
+  {
    "path": "assets/site.css",
    "sha256": "4996b51c80cf90ef28beb1562ef666df92a452fd512bb7c72254ca1f0b348b6f",
    "bytes": 38312
@@ -37,13 +42,13 @@
   },
   {
    "path": "download.html",
-   "sha256": "89cc87678f1bbe2826decd9fdfdd26051837c216647bc06f6de69ec79175b620",
-   "bytes": 11513
+   "sha256": "54d5f6b1e69f19cf2f8cee872903e3b9a50ff9762d497feb6045d3855fe0f8f2",
+   "bytes": 7444
   },
   {
    "path": "en/download.html",
-   "sha256": "d91fac53b3ccf98a9e5401894ede766bb80e030062683e753729de047e30dfd3",
-   "bytes": 11239
+   "sha256": "ee84610c45bed65c13de020dd213400e99244d388ffcf899e0e6211e0c0da66b",
+   "bytes": 7172
   },
   {
    "path": "en/index.html",
@@ -52,8 +57,8 @@
   },
   {
    "path": "en/start.html",
-   "sha256": "ac110ffce78e856c685d25c8f1e29e090279fb8b63c342b83c0e967ee9779314",
-   "bytes": 10471
+   "sha256": "619e65124448214d51fcb683dbef85721a4c5261eec64276eefdaf8eb6de32d5",
+   "bytes": 7354
   },
   {
    "path": "index.html",
@@ -102,8 +107,8 @@
   },
   {
    "path": "start.html",
-   "sha256": "e3a5864f8a057dc53195e5b5a0824abf1bc6f253bdd6683d992e0e443802fe5e",
-   "bytes": 10843
+   "sha256": "90ca5ef7cce6a33bd210a74a25839808541faa977d293f7c1dfa8447196b395f",
+   "bytes": 7724
   },
   {
    "path": "status.json",
