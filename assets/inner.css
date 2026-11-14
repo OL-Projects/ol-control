@@ -126,7 +126,11 @@ ul.plain li::before{content:"—";color:var(--dim);flex:none}
 footer{border-top:1px solid var(--rule)}
 footer .wrap{max-width:1080px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--dim)}
 
-/* ---------- WCAG 2.5.8: every target is ≥44×44 px (comfort), never <24 ---------- */
+/* ---------- WCAG 2.5.8: 44 px minimum on every nav control, never below 24 on any axis ---------- */
+/* Measured 2026-11-14 (independent verifier): FR/EN are 28x44 (width is the text box, height 44),
+   skip link 153x33, brand 44x44. WCAG 2.5.8 needs 24x24 and every one clears it; the 44 figure is
+   the comfort floor and is enforced on the vertical axis, not claimed on both. */
+
 .brand{min-height:44px;min-width:44px}
 .nav a,.back{display:inline-flex;align-items:center;min-height:44px;padding:0 2px}
 .lang a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:28px}
